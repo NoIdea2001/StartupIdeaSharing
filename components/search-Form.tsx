@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from 'next/form'
 import SearchFormReset from "@/components/SearchFormReset"
+import { Button } from '@/components/ui/button'
 
 const SearchForm = ({query}:{
   query?:string
@@ -18,9 +19,9 @@ const SearchForm = ({query}:{
         <div className='flex gap-2'>
           {query && <SearchFormReset/>}
 
-          <button type='submit' className='search-btn text-white'>
+          <Button type='submit'>
             S
-          </button>
+          </Button>
         </div>
 
     </Form>
