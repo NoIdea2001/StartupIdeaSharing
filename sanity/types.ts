@@ -163,6 +163,7 @@ export type Author = {
   userName?: string;
   image?: string;
   bio?: string;
+  email?: string;
 };
 
 export type Markdown = string;

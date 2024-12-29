@@ -14,7 +14,7 @@ const View = async ({ id }: { id: string }) => {
       await writeClient
         .patch(id)
         .set({ views: totalViews + 1 })
-        .commit(),
+        .commit()
   );
 
   return (
