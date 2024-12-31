@@ -102,7 +102,7 @@
     }
 
     .view_skeleton {
-        @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3;
+        @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-20 right-7;
     }
 
     /* navbar */
@@ -120,15 +120,19 @@
 
     /* searchform */
     .search-form {
-        @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+        @apply max-w-3xl w-full h-20 bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex items-center gap-5;
     }
 
     .search-input {
-        @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-100 w-full h-auto outline-none;
+        @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-100 w-full outline-none;
     }
 
     .search-btn {
-        @apply size-[50px] rounded-full bg-black flex justify-center items-center !important;
+        @apply w-[50px] h-[50px] rounded-full bg-black flex justify-center items-center text-white !important;
+    }
+
+    .search-buttons-container {
+        @apply flex gap-2 items-center h-[50px];
     }
 
     /* startupcard */
@@ -187,7 +191,7 @@
 
     /* view */
     .view-container {
-        @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
+        @apply flex justify-end items-center mt-5 fixed bottom-20 right-7;
     }
 
     .view-text {

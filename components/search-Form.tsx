@@ -10,20 +10,18 @@ const SearchForm = ({query}:{
   return (
     <Form action='/' scroll={false} className='search-form'>
         <input 
-        name='query'
-        defaultValue={query}
-        className='seach-input' 
-        placeholder='search startups'
+          name='query'
+          defaultValue={query}
+          className='search-input' 
+          placeholder='search startups'
         />
 
-        <div className='flex gap-2'>
+        <div className='search-buttons-container'>
           {query && <SearchFormReset/>}
-
-          <Button type='submit'>
+          <Button type='submit' className='search-btn'>
             S
           </Button>
         </div>
-
     </Form>
   )
 }

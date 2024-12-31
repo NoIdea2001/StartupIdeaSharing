@@ -22,7 +22,7 @@ const Page = async ({params}:{params: Promise<{id:string}>}) => {
     const post = await client.fetch(STARTUPS_BY_QUERY_ID, {id});
     
     
-  console.log(post);
+  // console.log(post);
   
     
     if (!post) {
@@ -40,7 +40,7 @@ const Page = async ({params}:{params: Promise<{id:string}>}) => {
       </section>
 
       <section className='section_container'>
-        <img src={post.image} alt="thumbnail" className='w-full h-auto rounded-xl'/>
+        <Image src={post.image} alt="thumbnail" layout="responsive" width={700} height={475} className='w-full h-auto rounded-xl'/>
 
         <div className='space-y-5 mt-10 max-w-4xl mx-auto'>
           <div className='flex-between gap-5'>
@@ -66,7 +66,7 @@ const Page = async ({params}:{params: Promise<{id:string}>}) => {
 
         <hr className='divider'/>
       </section>
-      <Suspense fallback={<Skeleton className='view-skeleton'/>}>
+      <Suspense fallback={<Skeleton className='view_skeleton'/>}>
       <View id={id}/>
       </Suspense>
     </>

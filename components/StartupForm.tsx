@@ -15,20 +15,13 @@ const StartupForm = () => {
   const [pitch, setPitch] = useState("");
   const { toast } = useToast();
   const router = useRouter();
-  // const isPending = false;
+
   const handleFormSubmit = async (prevState: any, formData: FormData) => {
     try {
-      // const formValues = {
-      //   title: formData.get("title") as string,
-      //   description: formData.get("description") as string,
-      //   category: formData.get("category") as string,
-      //   link: formData.get("link") as string,
-      //   pitch,
-      // };
-      // await formSchema.parseAsync(formValues);
+      
 
       const result = await createIdea(prevState, formData, pitch);
-      console.log(result);
+
 
       if (result.status === "SUCCESS") {
         toast({
@@ -60,7 +53,8 @@ const StartupForm = () => {
     error: "",
     status: "INITIAL",
   });
-
+  console.log(state);
+  
   return (
     <form action={formAction} className="startup-form">
       <div>
