@@ -6,7 +6,7 @@ import slugify from "slugify";
 import { writeClient } from "@/sanity/lib/write-cliet";
 
 
-export async function createIdea(state: any, form: FormData, pitch: string) {
+export async function createIdea(state: unknown, form: FormData, pitch: string) {
   const session = await auth();
 
   if (!session) {
